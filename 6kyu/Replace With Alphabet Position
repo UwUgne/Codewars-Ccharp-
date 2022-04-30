@@ -1,0 +1,25 @@
+//6 kyu
+public static class Kata
+{
+  public static string AlphabetPosition(string text)
+  {
+     string Position = "";
+   string Text = text.ToLower();
+   string alphabet = "abcdefghijklmnopqrstuvwxyz";
+    
+    for (int i = 0; i < text.Length; i++)
+      {
+        int index = alphabet.IndexOf(Text[i]);
+      
+        if (index == -1) continue;  
+      
+       else
+            {
+                int ind = index + 1;
+                Position += ind.ToString() + " ";
+            }
+      } 
+    
+     return Position.TrimEnd(new char[] { ' '});
+  }
+}
