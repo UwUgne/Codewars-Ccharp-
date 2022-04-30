@@ -1,6 +1,11 @@
- public static string[] inArray(string[] array1, string[] array2) //6kyu
-    {
-        List<string> r = new List<string>();
+ using System.Collections.Generic;
+using System;
+
+class WhichAreIn
+        {
+            public static string[] inArray(string[] array1, string[] array2) 6kyu
+            {
+                  List<string> r = new List<string>();
 
         for (int i = 0; i < array2.Length; i++)
         {
@@ -15,4 +20,5 @@
         }
         r.Sort();
         return r.ToArray();
-    }
+            }
+        }
