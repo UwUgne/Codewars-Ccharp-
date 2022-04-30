@@ -1,0 +1,18 @@
+ public static string[] inArray(string[] array1, string[] array2) //6kyu
+    {
+        List<string> r = new List<string>();
+
+        for (int i = 0; i < array2.Length; i++)
+        {
+            for (int j = 0; j < array1.Length; j++)
+            {
+                if (array2[i].Contains(array1[j]))
+                {
+                    if (!r.Contains(array1[j]))
+                   r.Add(array1[j]);
+                }
+            }
+        }
+        r.Sort();
+        return r.ToArray();
+    }
