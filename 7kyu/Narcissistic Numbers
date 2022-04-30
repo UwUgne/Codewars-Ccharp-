@@ -1,0 +1,19 @@
+using System;
+class Kata
+{
+    public static bool IsNarcissistic(long n)
+    {
+        char [] letter = n.ToString().ToCharArray();
+        double total = 0;
+
+        for (int i = 0; i < letter.Length; i++)
+        {
+            long num = int.Parse(letter[i].ToString());
+
+            total += Math.Pow(num, letter.Length);  
+        }
+
+        if (total == n) return true;
+
+        else return false;
+     }
