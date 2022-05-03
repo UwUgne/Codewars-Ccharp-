@@ -1,0 +1,39 @@
+using System;
+public class Kata {
+  public static string Assemble(string[] copies) 
+  {
+     if (copies.Length == 0)
+        {
+            return "";
+        }
+  
+    for (int i = 0; i < copies.Length; i++ )  Console.WriteLine(copies[i]);
+    
+        string Newcopy =  new string( '%', copies[0].Length);
+        char[] sb = Newcopy.ToCharArray();
+        string result = "";
+    
+        for (int i = 0; i < Newcopy.Length; i++)
+        {
+            for (int j = 0; j < copies.Length; j++)
+            {
+               var copy = copies[j];
+
+                if (copy[i] != '*')
+                {
+                    if (sb[i] == '#' || sb[i] == '%')
+                    { 
+                        sb[i] = copy[i];
+                    }
+                }
+                else if (sb[i] == '#' || sb[i] == '%')
+                {
+                    sb[i] = '#';
+                }
+            }
+            result += sb[i];
+        }
+
+        return result;
+  }
+}
