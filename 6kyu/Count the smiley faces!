@@ -1,0 +1,16 @@
+public static class Kata
+{
+  public static int CountSmileys(string[] smileys) 
+  {
+       int count = 0;
+        for (int i = 0; i < smileys.Length; i++)
+        {
+            if (smileys[i] == ";)" || smileys[i] == ":)" || smileys[i] == ":D" || smileys[i] == ";-D" || smileys[i] == ":~)" || smileys[i] == ";-)"
+               || smileys[i] == ":~D" || smileys[i] == ";~D" || smileys[i] == ":-)" || smileys[i] == ":-D" || smileys[i] == ";D"
+                || smileys[i] == ";~)" || smileys[i] == ":~)")
+                count++;
+        }
+
+        return count;
+  }
+}
